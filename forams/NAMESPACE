@@ -1,0 +1,9 @@
+exportPattern("^[[:alpha:]]+")
+exportMethods(
+    "plot" 
+)
+exportClasses(
+    "abc",
+     "fi",
+     "she" 
+)
