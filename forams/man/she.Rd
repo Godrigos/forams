@@ -1,5 +1,5 @@
 \name{she}
-\alias{she,she-method}
+\alias{she}
 
 \title{
 SHE Analysis
@@ -8,7 +8,7 @@ SHE Analysis
 This function implements the SHE method in community abundance datasets.
 }
 \usage{
-\S4method{she}{she}(df, method)
+  she(df, method)
 }
 
 \arguments{

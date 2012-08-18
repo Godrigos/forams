@@ -1,5 +1,5 @@
 \name{abc}
-\alias{abc,abc-method}
+\alias{abc}
 
 \title{
 Abundance and Biomass Comparison Method
@@ -8,7 +8,7 @@ Abundance and Biomass Comparison Method
 This function performs the ABC and W statistic calculation.
 }
 \usage{
-\S4method{abc}{abc}(df, Perm, confInt)
+  abc(df, Perm, confInt)
 }
 
 \arguments{

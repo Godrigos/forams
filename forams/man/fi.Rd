@@ -1,5 +1,5 @@
 \name{fi}
-\alias{fi,fi-method}
+\alias{fi}
 
 \title{
 The FORAM Index
@@ -8,7 +8,7 @@ The FORAM Index
 This function implements the FORAM Index (FI) in community abundance datasets.
 }
 \usage{
-\S4method{fi}{fi}(df, groups)
+  fi(df, groups)
 }
 
 \arguments{
@@ -38,6 +38,7 @@ Hallock, P., Lidz, B.H., Cockey-Burkhard, E.M. & Donnelly, K.B. (2003). Foramini
 \author{
 Rodrigo Aluizio
 }
+
 \note{
 FI > 4 indicates environment conducive to reef growth (CRG), FI varying between 3 and 5 indicates environmental change (Coefficient of Variation > 0.1), 2 < FI < 4 indicates environment marginal for reef growth (MRG) and unsuitable for recovery and FI < 2 indicates stressed conditions unsuitable for reef growth (UGR).
 
