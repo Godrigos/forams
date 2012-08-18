@@ -1,5 +1,5 @@
 \name{fi}
-\alias{fi}
+\alias{fi,fi-method}
 
 \title{
 The FORAM Index
@@ -41,7 +41,7 @@ Rodrigo Aluizio
 \note{
 FI > 4 indicates environment conducive to reef growth (CRG), FI varying between 3 and 5 indicates environmental change (Coefficient of Variation > 0.1), 2 < FI < 4 indicates environment marginal for reef growth (MRG) and unsuitable for recovery and FI < 2 indicates stressed conditions unsuitable for reef growth (UGR).
 
-For more details on other graphic prameters see \code{\link{plot.default}} and \code{\link{par}}.
+For more details on other graphic prameters see \code{\link[graphics]{plot.default}} and \code{\link[graphics]{par}}.
 }
 
 \examples{
@@ -49,30 +49,6 @@ data(LF)
 data(Factors)
 MyFI <- fi(LF, Factors)
 plot(MyFI)
-
-## The function is currently defined as
-function (df, groups) 
-{
-    Ps <- NA
-    Po <- NA
-    Ph <- NA
-    for (i in 1:ncol(df)) {
-        Ps[i] <- as.matrix(sum(df[i][groups == "Ps"])/sum(df[i]))
-    }
-    for (i in 1:ncol(df)) {
-        Po[i] <- as.matrix(sum(df[i][groups == "Po"])/sum(df[i]))
-    }
-    for (i in 1:ncol(df)) {
-        Ph[i] <- as.matrix(sum(df[i][groups == "Ph"])/sum(df[i]))
-    }
-    FI <- as.matrix((10 * Ps) + Po + (2 * Ph))
-    FI2 <- cbind(as.matrix(1:ncol(df)), FI)
-    colnames(FI2) <- c("PlotOrder", "FI")
-    rownames(FI2) <- colnames(df)
-    FI2 <- as.data.frame(FI2)
-    class(FI2) <- "fi"
-    return(FI2)
-  }
 }
 
 \keyword{arth}

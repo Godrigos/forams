@@ -25,7 +25,7 @@ Single slot classe used to store a \code{"data.frame"} object.
 Rodrigo Aluizio
 }
 \seealso{
-See Also as \code{\link{fi}}
+See Also as \code{\link[forams]{fi}}
 }
 \examples{
 showClass("fi")

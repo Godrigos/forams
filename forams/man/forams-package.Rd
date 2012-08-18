@@ -42,7 +42,7 @@ Wilson, B., Dawe, R., Gopee, A., Grant, S., Kissoon, A., Young, T., Noon, C., Mc
 \keyword{ package }
 
 \seealso{
- \code{\link{abc}}, \code{\link{fi}}, \code{\link{she}}
+ \code{\link[forams]{abc}}, \code{\link[forams]{fi}}, \code{\link[forams]{she}}
 }
 \examples{
 data(NB)

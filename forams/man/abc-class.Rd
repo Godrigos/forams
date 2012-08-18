@@ -28,9 +28,10 @@ Rodrigo Aluizio
 }
 
 \seealso{
-\code{\link{abc}}
-}
+See Also as \code{\link[forams]{abc}}}
+
 \examples{
 showClass("abc")
 }
+
 \keyword{classes}

@@ -27,7 +27,8 @@ Rodrigo Aluizio
 }
 
 \seealso{
-See Also as \code{\link{she}}}
+See Also as \code{\link[forams]{she}}}
+
 \examples{
 showClass("she")
 }
