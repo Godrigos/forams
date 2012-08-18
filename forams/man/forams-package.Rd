@@ -3,40 +3,55 @@
 \alias{forams}
 \docType{package}
 \title{
-What the package does (short line)
-~~ package title ~~
+Foraminifera and Community Ecology Analyses
 }
 \description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
+SHE, FORAM Index and ABC Method analyses and custom plot functions for community data.
 }
 \details{
 \tabular{ll}{
 Package: \tab forams\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 2.0\cr
 Date: \tab 2012-08-08\cr
-License: \tab What license is it under?\cr
-Depends: \tab methods\cr
+License: \tab GLP (>=2)\cr
+Depends: \tab methods, vegan, permute\cr
 }
-~~ An overview of how to use the package, including the most important functions ~~
+
+This package always uses data frames with \emph{taxa} as rows and sites or variables as columns. It also provides customizable plot functions to use with the objects resulting from the analyses, and randomly generated example datasets.
+
+The analyses performed by this package are: SHE, FORAM Index and ABC Method.
 }
 \author{
-Who wrote it
+Rodrigo Aluizio
 
-Maintainer: Who to complain to <yourfault@somewhere.net>
-~~ The author and/or maintainer of the package ~~
+Maintainer: Rodrigo Aluizio <r.aluizio@gmail.com>
 }
 \references{
-~~ Literature or other references for background information ~~
+Buzas, M.A. & Hayek, L.A.C. (1998). SHE analysis for biofacies identification. \emph{Journal of Foraminiferal Research} \bold{28} (3), 233-239.
+
+Hallock, P., Lidz, B.H., Cockey-Burkhard, E.M. & Donnelly, K.B. (2003). Foraminifera as bioindicators in coral reef assessment and monitoring: The foram index. \emph{Environmental monitoring and assessment} \bold{81}, 221-238.
+
+Warwick, R.M. (1986). A new method for detecting pollution effects on marine macrobenthic communities. \emph{Marine Biology} \bold{92} (4), 557-562.
+
+Warwick, R.M., & Clarke, K.R. (1994). Relearning the ABC: taxonomic changes and abundance/biomass relationships in disturbed benthic communities. \emph{Marine Biology} \bold{118} (4), 739-744.
+
+Wilson, B., Dawe, R., Gopee, A., Grant, S., Kissoon, A., Young, T., Noon, C., McLean, A. & Singh, K. (2010). Determining Boundaries between Abundance Biozones Using Minimal Equipment. \emph{International Journal of Ecology} \bold{2010}, 1-14.
 }
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation ~~
-~~ directory ~~
+
 \keyword{ package }
+
 \seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+ \code{\link{abc}}, \code{\link{fi}}, \code{\link{she}}
 }
 \examples{
-~~ simple examples of the most important functions ~~
+data(NB)
+data(Factors)
+data(LF)
+# ABC
+plot(abc(NB))
+# FORAM Index
+plot(fi(LF, Factors))
+# SHE
+plot(she(LF))
 }

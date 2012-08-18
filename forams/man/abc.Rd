@@ -8,7 +8,7 @@ Abundance and Biomass Comparison Method
 This function performs the ABC and W statistic calculation.
 }
 \usage{
-\S4method{abc}(df, Perm, confInt)
+\S4method{abc}{data.frame,numeric}(df, Perm, confInt)
 }
 
 \arguments{
@@ -26,11 +26,14 @@ the Confidence interval range (90\%, 95\% or 99\%, any other values will cause a
 The function generates a list of cumulative percentage values of Abundance, Biomass and Biomass - Abundance for each \emph{taxon} (\cite{Warwick 1986}), which are used for W statistic (\cite{Warwick & Clarke 1994}) calculation and posterior k-dominance curve plotting.
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+An \code{abc} S4 object has the fallowing elements:
+
+An abc slot with: 
+  \item{Accum.Abun }{The cumulative percentage of abundance contribution.}
+  \item{Accum.Biomass }{The cumulative percentage of biomass contribution.}
+  \item{BiAi }{Biomass - Abundance calculation results.}
+and a W.Stat slot with:
+  \item{W.Stat }{The result of the W statistic calculation and its Confidence Interval.}
 }
 \references{
 Warwick, R.M. (1986). A new method for detecting pollution effects on marine macrobenthic communities. \emph{Marine Biology} \bold{92} (4), 557-562.
@@ -41,7 +44,7 @@ Warwick, R.M., & Clarke, K.R. (1994). Relearning the ABC: taxonomic changes and 
 Rodrigo Aluizio
 }
 \note{
-The list elementes are ordered according to \code{Accum.Abun}, but the calculation is based on the contribution decreasing order, independently any of the variables or \emph{taxon}.
+The list elementes are ordered according to \code{Accum.Abun}, but the calculation is based on the contribution decreasing order, independently of any of the variables or \emph{taxon}.
 }
 
 \examples{
@@ -132,7 +135,6 @@ function (df, Perm = 1000, confInt = 95)
     return(Table)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
+
 \keyword{arith}
 \keyword{math}

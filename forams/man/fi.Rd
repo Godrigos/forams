@@ -1,53 +1,54 @@
 \name{fi}
 \alias{fi}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
-%%  ~~function to do ... ~~
+The FORAM Index
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+This function implements the FORAM Index (FI) in community abundance datasets.
 }
 \usage{
-fi(df, groups)
+\S4method{fi}{fi}(df, groups)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{df}{
-%%     ~~Describe \code{df} here~~
+a numerical data frame with samples as columns and \emph{taxa} as rows.
 }
   \item{groups}{
-%%     ~~Describe \code{groups} here~~
+a three level grouping factor.
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+his analysis is directed for health evaluation and monitoring of reef environments (\cite{Hallock et al. 2003}) and it is based in foraminiferal total fauna methodology. 
+
+The \emph{taxa} classification that determines the groups are originally based on genera, but species data from literature or experiments will be accepted as well. The grouping factor must be composed solely by \code{Ps} (simbiont-bearing), \code{Po} (opportunistic), or \code{Ph} (other small heterotrophic) levels. NAs are not allowed.
+
+The plot uses the \code{axis} function, so a complete customization (i.e. \code{side}) of the axes is not possible at this moment, and some other parameters may show improperly if changed.
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+A \code{fi} object has the fallowing elements:
+
+  \item{PlotOrder }{a numerical vector defining the sites plot order, only used for plotting.}
+  \item{FI }{a numerical vector with the sites FORAM Index values.}
 }
 \references{
-%% ~put references to the literature/web site here ~
+Hallock, P., Lidz, B.H., Cockey-Burkhard, E.M. & Donnelly, K.B. (2003). Foraminifera as bioindicators in coral reef assessment and monitoring: The foram index. \emph{Environmental monitoring and assessment} \bold{81}, 221-238.
 }
 \author{
-%%  ~~who you are~~
+Rodrigo Aluizio
 }
 \note{
-%%  ~~further notes~~
+FI > 4 indicates environment conducive to reef growth (CRG), FI varying between 3 and 5 indicates environmental change (Coefficient of Variation > 0.1), 2 < FI < 4 indicates environment marginal for reef growth (MRG) and unsuitable for recovery and FI < 2 indicates stressed conditions unsuitable for reef growth (UGR).
+
+For more details on other graphic prameters see \code{\link{plot.default}} and \code{\link{par}}.
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+data(LF)
+data(Factors)
+MyFI <- fi(LF, Factors)
+plot(MyFI)
 
 ## The function is currently defined as
 function (df, groups) 
@@ -73,7 +74,6 @@ function (df, groups)
     return(FI2)
   }
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+
+\keyword{arth}
+\keyword{math}

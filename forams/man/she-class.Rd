@@ -2,15 +2,14 @@
 \Rdversion{1.1}
 \docType{class}
 \alias{she-class}
-\alias{plot,she-method}
 
 \title{Class \code{"she"}}
 \description{
-%%  ~~ A concise (1-5 lines) description of what the class is. ~~
+Class used to store \code{"she"} analysis objects.
 }
 \section{Objects from the Class}{
 Objects can be created by calls of the form \code{new("she", ...)}.
-%%  ~~ describe objects here ~~ 
+Single slot classe used to store a \code{"data.frame"} object.
 }
 \section{Slots}{
   \describe{
@@ -22,22 +21,13 @@ Objects can be created by calls of the form \code{new("she", ...)}.
     \item{plot}{\code{signature(x = "she")}: ... }
 	 }
 }
-\references{
-%%  ~~put references to the literature/web site here~~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
+\author{
+Rodrigo Aluizio
+}
 
 \seealso{
-%%  ~~objects to See Also as \code{\link{~~fun~~}}, ~~~
-%%  ~~or \code{\linkS4class{CLASSNAME}} for links to other classes ~~~
-}
+See Also as \code{\link{she}}}
 \examples{
 showClass("she")
 }

@@ -2,15 +2,14 @@
 \Rdversion{1.1}
 \docType{class}
 \alias{abc-class}
-\alias{plot,abc-method}
 
 \title{Class \code{"abc"}}
 \description{
-%%  ~~ A concise (1-5 lines) description of what the class is. ~~
+Class used to store \code{"abc"} analysis objects.
 }
 \section{Objects from the Class}{
 Objects can be created by calls of the form \code{new("abc", ...)}.
-%%  ~~ describe objects here ~~ 
+This class is composed by two slots, the first one stores a table with the abc analysis results and the second one the W Statistic result and its Confidence Interval.
 }
 \section{Slots}{
   \describe{
@@ -23,21 +22,13 @@ Objects can be created by calls of the form \code{new("abc", ...)}.
     \item{plot}{\code{signature(x = "abc")}: ... }
 	 }
 }
-\references{
-%%  ~~put references to the literature/web site here~~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
-}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
+\author{
+Rodrigo Aluizio
+}
 
 \seealso{
-%%  ~~objects to See Also as \code{\link{~~fun~~}}, ~~~
-%%  ~~or \code{\linkS4class{CLASSNAME}} for links to other classes ~~~
+\code{\link{abc}}
 }
 \examples{
 showClass("abc")

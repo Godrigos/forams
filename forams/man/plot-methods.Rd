@@ -13,20 +13,20 @@
 \describe{
 
 \item{\code{signature(x = "abc")}}{
-%%  ~~describe this method here~~
+An object of class /code{"abc"} resulting from and \code{\link{abc}} analysis.
 }
 
 \item{\code{signature(x = "ANY")}}{
-%%  ~~describe this method here~~
+Other classes objects that will be handled by \code{\link{plot.default}}.
 }
 
 \item{\code{signature(x = "fi")}}{
-%%  ~~describe this method here~~
+An object of class /code{"fi"} resulting from and \code{\link{fi}} analysis.
 }
 
 \item{\code{signature(x = "she")}}{
-%%  ~~describe this method here~~
+An object of class /code{"she"} resulting from and \code{\link{she}} analysis.
 }
 }}
 \keyword{methods}
-\keyword{ ~~ other possible keyword(s) ~~ }
+\keyword{plot}
