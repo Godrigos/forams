@@ -1,0 +1,339 @@
+
+R version 2.15.2 (2012-10-26) -- "Trick or Treat"
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "forams"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('forams')
+Loading required package: vegan
+Loading required package: permute
+This is vegan 2.0-5
+> 
+> assign(".oldSearch", search(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("Factors")
+> ### * Factors
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: Factors
+> ### Title: FORAM Index Factors
+> ### Aliases: Factors
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> data(Factors)
+> summary(Factors)
+  FI    
+ Ph:20  
+ Po: 6  
+ Ps: 3  
+> 
+> 
+> 
+> cleanEx()
+> nameEx("LF")
+> ### * LF
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: LF
+> ### Title: FORAM Index and SHE dataset
+> ### Aliases: LF
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> data(LF)
+> str(LF)
+'data.frame':	29 obs. of  23 variables:
+ $ St01: num  0 0 265 0 0 0 0 0 0 0 ...
+ $ St02: num  0 0 225 0 0 0 0 0 4 0 ...
+ $ St03: num  0 1 355 0 0 0 0 0 0 0 ...
+ $ St04: num  0 1 174 0 0 0 0 0 0 0 ...
+ $ St05: num  0 0 4 0 1 0 0 0 7 0 ...
+ $ St06: num  0 0 23 1 0 9 0 1 60 1 ...
+ $ St07: num  0 0 0 0 0 0 0 0 7 0 ...
+ $ St08: num  0 0 16 4 0 3 0 0 10 2 ...
+ $ St09: num  3 0 0 0 2 22 1 9 59 0 ...
+ $ St10: num  0 0 13 0 0 6 0 0 6 0 ...
+ $ St11: num  0 0 29 0 18 7 0 15 150 5 ...
+ $ St12: num  0 0 0 0 2 1 0 0 13 0 ...
+ $ St13: num  0 0 0 1 0 8 0 1 0 0 ...
+ $ St14: num  1 0 14 6 4 12 0 3 4 0 ...
+ $ St15: num  0 0 5 0 0 7 0 0 0 0 ...
+ $ St16: num  0 0 0 0 26 0 0 24 25 4 ...
+ $ St17: num  0 0 0 5 0 0 0 5 9 0 ...
+ $ St18: num  0 0 0 0 0 0 0 0 22 0 ...
+ $ St19: num  0 0 0 5 0 16 0 19 89 0 ...
+ $ St20: num  0 0 0 0 14 0 0 0 127 0 ...
+ $ St21: num  0 0 0 3 0 2 0 33 55 0 ...
+ $ St22: num  0 0 0 0 0 4 0 0 60 0 ...
+ $ St23: num  0 0 0 0 0 0 0 0 9 0 ...
+> 
+> 
+> 
+> cleanEx()
+> nameEx("NB")
+> ### * NB
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: NB
+> ### Title: ABC Method Dataset
+> ### Aliases: NB
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> data(NB)
+> str(NB)
+'data.frame':	316 obs. of  2 variables:
+ $ N      : num  179 5 31 19 4 43 101 1 76 84 ...
+ $ Biomass: num  2.126 1.812 3.857 0.897 0.189 ...
+> 
+> 
+> 
+> cleanEx()
+> nameEx("abc-class")
+> ### * abc-class
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: abc-class
+> ### Title: Class '"abc"'
+> ### Aliases: abc-class
+> ### Keywords: classes
+> 
+> ### ** Examples
+> 
+> showClass("abc")
+Class "abc" [package "forams"]
+
+Slots:
+                            
+Name:         abc     W.Stat
+Class: data.frame    numeric
+> 
+> 
+> 
+> cleanEx()
+> nameEx("abc")
+> ### * abc
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: abc
+> ### Title: Abundance and Biomass Comparison Method
+> ### Aliases: abc
+> ### Keywords: arith math
+> 
+> ### ** Examples
+> 
+> data(NB)
+> MyABC <- abc(NB)
+> plot(MyABC)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("fi-class")
+> ### * fi-class
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: fi-class
+> ### Title: Class '"fi"'
+> ### Aliases: fi-class
+> ### Keywords: classes
+> 
+> ### ** Examples
+> 
+> showClass("fi")
+Class "fi" [package "forams"]
+
+Slots:
+                 
+Name:          fi
+Class: data.frame
+> 
+> 
+> 
+> cleanEx()
+> nameEx("fi")
+> ### * fi
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: fi
+> ### Title: The FORAM Index
+> ### Aliases: fi
+> ### Keywords: arth math
+> 
+> ### ** Examples
+> 
+> data(LF)
+> data(Factors)
+> MyFI <- fi(LF, Factors)
+> plot(MyFI)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("forams-package")
+> ### * forams-package
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: forams-package
+> ### Title: Foraminifera and Community Ecology Analyses
+> ### Aliases: forams-package forams
+> ### Keywords: package
+> 
+> ### ** Examples
+> 
+> data(NB)
+> data(Factors)
+> data(LF)
+> # ABC
+> plot(abc(NB))
+> # FORAM Index
+> plot(fi(LF, Factors))
+> # SHE
+> plot(she(LF))
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.abc")
+> ### * plot.abc
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.abc
+> ### Title: Plot function for Abundance and Biomass Comparison Method
+> ###   objects.
+> ### Aliases: plot.abc plot,abc-method
+> ### Keywords: dplot hplot
+> 
+> ### ** Examples
+> 
+> data(NB)
+> MyABC <- abc(NB)
+> plot(MyABC)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.fi")
+> ### * plot.fi
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.fi
+> ### Title: Custom plot function for FORAM Index results
+> ### Aliases: fi.plot plot,fi-method
+> ### Keywords: dplot hplot
+> 
+> ### ** Examples
+> 
+> data(LF)
+> data(Factors)
+> MyFI <- fi(LF, Factors)
+> plot(MyFI)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.she")
+> ### * plot.she
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.she
+> ### Title: Custom plot function for SHE Analysis objects
+> ### Aliases: plot.she plot,she-method
+> ### Keywords: dplot hplot
+> 
+> ### ** Examples
+> 
+> data(LF)
+> MySHE <- she(LF, "abun")
+> plot(MySHE)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("she-class")
+> ### * she-class
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: she-class
+> ### Title: Class '"she"'
+> ### Aliases: she-class
+> ### Keywords: classes
+> 
+> ### ** Examples
+> 
+> showClass("she")
+Class "she" [package "forams"]
+
+Slots:
+                 
+Name:          bi
+Class: data.frame
+> 
+> 
+> 
+> cleanEx()
+> nameEx("she")
+> ### * she
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: she
+> ### Title: SHE Analysis
+> ### Aliases: she
+> ### Keywords: math arth
+> 
+> ### ** Examples
+> 
+> data(LF)
+> MySHE <- she(LF, "abun")
+> plot(MySHE)
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cat("Time elapsed: ", proc.time() - get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  1.47 0.05 1.53 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
