@@ -1,8 +1,8 @@
 Package: forams
 Type: Package
 Title: Foraminifera and Community Ecology Analyses
-Version: 2.0-2
-Date: 2012-11-06
+Version: 2.0-3
+Date: 2012-12-12
 Author: Rodrigo Aluizio
 Maintainer: Rodrigo Aluizio <r.aluizio@gmail.com>
 Description: SHE, FORAM Index and ABC Method analyses and custom plot
