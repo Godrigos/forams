@@ -1,4 +1,4 @@
 forams
 ======
 
-Repositório GIT do pacote forams para R
+GIT repository for the forams R package.
