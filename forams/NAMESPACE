@@ -7,3 +7,8 @@ exportClasses(
      "fi",
      "she" 
 )
+
+importFrom(vegan, specnumber, diversity)
+importFrom(stats, var)
+
+import(methods)
