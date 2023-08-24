@@ -9,6 +9,6 @@ Description: SHE, FORAM Index and ABC Method analyses and custom plot
         functions for community data.
 License: GPL (>= 2)
 Depends: methods
-Imports: vegan, stats
+Imports: vegan, stats, graphics
 NeedsCompilation: no
 Packaged: 2015-07-03 12:40:44 UTC; Rodrigo
